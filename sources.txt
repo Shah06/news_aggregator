@@ -1,0 +1,4 @@
+https://news.google.com/rss/search?q=when:24h+allinurl:thehill.com&hl=en-US&gl=US&ceid=US:en
+https://news.google.com/rss/search?q=when:24h+allinurl:apnews.com&hl=en-US&gl=US&ceid=US:en
+https://news.google.com/rss/search?q=when:24h+allinurl:bloomberg.com&hl=en-US&gl=US&ceid=US:en
+https://news.google.com/rss/search?q=when:24h+allinurl:reuters.com&hl=en-US&gl=US&ceid=US:en
