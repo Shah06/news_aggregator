@@ -2,6 +2,8 @@ import feedparser
 import time
 from datetime import datetime
 
+VERSION_NUM = "v_0.1_alpha"
+
 # timezone adjustment (currently 12 hours)
 TZ_ADJUST = -28800
 
@@ -13,7 +15,7 @@ SOURCES_FILE = "sources.txt"
 sources = [line.rstrip('\n') for line in open(SOURCES_FILE)]
 
 articles_arr = [] # should be an array of tuples (timestamp, link)
-html_content = "<!DOCTYPE html><html><body><h1>NEWS</h1><h3>Updated: "+str(datetime.now())+"</h3><ol>"
+html_content = """<!DOCTYPE html><html><head><title>Atharva Shah</title><script>function openWindow(url){window.open(url, "popup", "width=600,height=600");}</script><script src="index.js" defer></script><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="style.css"></head><body><div class="nav"><div class="nav_section"><a href="./index.html" class="logo">Atharva Shah</a><div class="right_align" id="nav_hamburger"></div></div><div class="nav_section"><div class="nav_links"><a href="https://www.linkedin.com/in/atharva-s-a47b8a132/" target="_blank">LinkedIn</a><a href="https://github.com/Shah06/" target="_blank">Github</a><a href="./Atharva_Shah_Resume.pdf" target="_blank">Resume</a><a class="active" href="./newsfeed.html" target="_blank">News</a></div></div></div><div class="main"><h1>news_aggregator """+VERSION_NUM+"""</h1><p>Last updated """+str(datetime.now())+"""</p><ol>"""
 
 for source in sources:
    
